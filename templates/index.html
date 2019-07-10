@@ -1,0 +1,60 @@
+<!doctype html>
+<title>Hello PhotoHack</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+<h1 id="display_url">Server url: {{server_url}}</h1>
+<br/>
+<form action="http://localhost:5000/uploader" method="POST"
+      enctype="multipart/form-data">
+    <!--<input type="file" name="file"/>-->
+    <!--<input id="upload-btn" type="submit"/>-->
+    <label for="file-upload" class="custom-file-upload">
+    <i class="fa fa-cloud-upload"></i> Select another selfie
+    </label>
+    <input id="file-upload" type="file" name="file"/>
+    <input id="upload-btn" type="submit" value="Upload"/>
+</form>
+
+
+
+
+<br/>
+<br/>
+<form action="" method="post" role="form">
+
+
+    <div id="selfie_choose">
+        {% for img in images %}
+        <img onclick="javascript:selectImg('{{img}}')" height="100"
+             src="{{img}}"/>
+        {% endfor %}
+
+    </div>
+    <br/>
+    <div class="form-group">
+        <label for="selfie">Selected:</label>
+        <input id="selfie" name="selfie" value="static/src/pavel.jpg" readonly>
+    </div>
+    <div class="form-group">
+        <label for="msg">Message:</label>
+        <input type="text" class="form-control" id="msg" name="msg" placeholder="Type message"></div>
+    <button id = "submit-btn" type="submit" class="btn btn-success">Submit</button>
+</form>
+
+<script>
+    function selectImg(img) {
+        document.getElementById("selfie").setAttribute("value", img);
+    }
+</script>
+
+<br/>
+    <div id="result_images">
+        {% for img in result_images %}
+        <img height="200" src="{{img}}"/>
+        {% endfor %}
+
+    </div>

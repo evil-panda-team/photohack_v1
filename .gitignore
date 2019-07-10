@@ -1,0 +1,14 @@
+.idea/
+*.pyc
+.DS_Store
+._*
+__pycache__
+
+stylebank/weights_test/model.pth
+stylebank/weights_test_2/model_2.pth
+static/res/*
+bot/static/res/*
+pics/*
+web/core
+FaceSwap/*
+

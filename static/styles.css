@@ -1,0 +1,33 @@
+#submit-btn {
+    background-color: #764897;
+}
+#msg {
+    /*padding-right: 400px;*/
+    width:400px;
+}
+#display_url {
+    color: #764897;
+}
+
+#upload-btn {
+    background-color: rgba(141, 144, 144, 0.79);
+    color: white;
+}
+
+body {
+    padding: 100px;
+    padding-top: 20px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    color: white;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #d80861;
+}
