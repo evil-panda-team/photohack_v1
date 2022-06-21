@@ -5,7 +5,7 @@ dlib == 19.9.0
 
 # face_swap.py: 6
 # main.py: 7
-numpy == 1.13.1
+numpy == 1.22.0
 
 # face_detection.py: 1
 # face_points_detection.py: 3
