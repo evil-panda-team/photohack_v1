@@ -14,4 +14,4 @@ numpy == 1.13.1
 opencv == 3.4.0.12
 
 # face_swap.py: 7
-scipy == 0.18.0
+scipy == 1.10.0
